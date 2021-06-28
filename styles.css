@@ -1,0 +1,20 @@
+button:not(.no-round){
+    border-radius: 50% !important;
+    width: 40px;
+    height: 40px;
+}
+
+.table-container{
+    height: 600px;
+    max-height: 600px;
+    overflow-y: scroll;
+    background-color: rgb(246, 246, 246);
+}
+
+thead{
+    background-color: white;
+}
+
+.info{
+    background-color: rgb(246, 251, 255);
+}

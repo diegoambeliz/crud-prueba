@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="d-flex w-100 my-3 justify-content-end">
+            <button class="btn btn-success" data-toggle="modal" data-target="#modal" id="nuevo"><i class="fa fa-plus"></i></button>
+        </div>
+
+        <div class="table-container">
+
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario sin IVA</th>
+                        <th>IVA</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A1</td>
+                        <td>Arroz blanco</td>
+                        <td>132</td>
+                        <td>Q 5.36</td>
+                        <td>Q 0.64</td>
+                        <td>Q 6.00</td>
+                        <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal"><i
+                                    class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="search-box mt-5">
+            <div class="form-group d-flex">
+                <input type="text" class="form-control" id="inputBuscar" placeholder="Ingrese un código de producto para buscar...">
+                <button class="btn btn-primary mx-4" id="searchProducto"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="info mb-5 p-5">
+                <p>
+                    <strong>Nombre: </strong> <span id="txtNombre"></span>
+                </p>
+                <p>
+                    <strong>Cantidad: </strong> <span id="txtCantidad"></span>
+                </p>
+                <p>
+                    <strong>Precio sin IVA: </strong> <span id="txtPI"></span>
+                </p>
+                <p>
+                    <strong>IVA: </strong> <span id="txtIVA"></span>
+                </p>
+                <p>
+                    <strong>Precio total: </strong> <span id="txtPT"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Productos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="#" onsubmit="return false;"></form>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Código" id="codigo">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Cantidad" id="cantidad">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Precio sin IVA" id="precioSinIva">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger no-round" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="btnGuardar" class="btn btn-success no-round">Guardar cambios</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/044ef8107f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
